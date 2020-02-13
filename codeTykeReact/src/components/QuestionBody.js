@@ -23,7 +23,10 @@ const QuestionBody = props => {
   };
 
   const exit = event => {
-    if (event.target.className === "modal-container" || "close-icon")
+    if (
+      event.target.className === "modal-container" ||
+      "material-icons close-icon"
+    )
       setShowModal(false);
   };
 
@@ -61,6 +64,4 @@ const QuestionBody = props => {
   );
 };
 
-// className={`submitButton ${checkboxStatus.includes(true) ? "active" : "disabled"}`}
-//  <img id="info-icon" alt="info" src="assets/info.png" />
 export default QuestionBody;
