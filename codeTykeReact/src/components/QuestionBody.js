@@ -22,6 +22,11 @@ const QuestionBody = props => {
     }
   };
 
+  const exit = event => {
+    if (event.target.className === "modal-container" || "close-icon")
+      setShowModal(false);
+  };
+
   return (
     <>
       <div id="questionHeaderContainer">
@@ -29,17 +34,15 @@ const QuestionBody = props => {
           <div id="questionHeader">{props.currentQuestion.title}</div>
           <i
             onClick={() => setShowModal(!showModal)}
-            className="material-icons"
+            className="material-icons info-icon"
           >
             info
           </i>
         </div>
 
         {showModal ? (
-          <div
-            className="modal-container"
-            onClick={() => setShowModal(!showModal)}
-          >
+          <div className="modal-container" onClick={e => exit(e)}>
+            <i className="material-icons close-icon">close</i>
             <Modal info={props.currentQuestion.additionalInfo} />
           </div>
         ) : null}

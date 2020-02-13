@@ -69,10 +69,21 @@ body {
   #questionHeaderContainer div {
     margin: 0px;
   }
-  .material-icons {
+
+  .info-icon {
     display: inline;
     color: #00bdff;
   }
+
+  .close-icon {
+    display: inline;
+    color: white;
+    z-index: 1;
+    position: fixed;
+    right: 10px;
+    top: 15px;
+  }
+
   .modal {
     border-radius: 10px;
     width: 95%;
@@ -99,7 +110,6 @@ body {
     padding-right: 10%;
   }
   .modal-container {
-    border: 2px solid red;
     position: absolute;
     top: 0;
     left: 0;
