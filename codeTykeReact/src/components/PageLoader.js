@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const PageLoader = (props) => {
-  return (<div class="loader"><span></span></div>)
-}
+const PageLoader = props => {
+  return (
+    <div className="loader">
+      <span></span>
+    </div>
+  );
+};
 
 export default PageLoader;

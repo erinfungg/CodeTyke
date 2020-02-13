@@ -1,14 +1,14 @@
-@import 'scss/shell/Header';
-@import 'scss/shell/Footer';
-@import 'scss/shell/PageLoader';
+@import "scss/shell/Header";
+@import "scss/shell/Footer";
+@import "scss/shell/PageLoader";
 
-@import 'scss/utils/FlexStyles';
+@import "scss/utils/FlexStyles";
 
-@import 'scss/components/ProgressBar';
+@import "scss/components/ProgressBar";
 
-@import 'scss/buttons/Button';
+@import "scss/buttons/Button";
 
-body{
+body {
   background-image: url("/assets/background.png");
   background-position: center;
   background-size: cover;
@@ -24,64 +24,128 @@ body{
   justify-content: center;
 }
 
-#mainWrapper{
+#mainWrapper {
   max-width: 800px;
   margin: 40px auto 80px auto;
 }
 
 #questionHeader {
-    text-align: center;
-    color: #00bdff;
-    font-weight: 600;
+  text-align: center;
+  color: #00bdff;
+  font-weight: 600;
+  font-size: 20px;
 }
-#questionHeaderContainer{
+#questionHeaderContainer {
   margin: 25px 10px;
 }
-#questionHeaderContainer div{
+#questionHeaderContainer div {
   margin: 10px;
 }
-#questionSubHeader{
+#questionSubHeader {
   font-size: 12px;
   text-align: center;
 }
-
-@media only screen and (max-width: 600px) {
-  #mainWrapper { margin-top: 20px; }
-  #questionSubHeader{ display: none;}
-  #questionHeaderContainer { margin: 20px 10px;}
+#info-icon {
+  display: none;
+}
+.material-icons {
+  display: none;
 }
 
+@media only screen and (max-width: 600px) {
+  #mainWrapper {
+    margin-top: 20px;
+  }
+  #questionSubHeader {
+    display: none;
+  }
+  #questionHeaderContainer {
+    margin: 20px 20px;
+  }
+  #mainHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  #questionHeaderContainer div {
+    margin: 0px;
+  }
+  .material-icons {
+    display: inline;
+    color: #00bdff;
+  }
+  .modal {
+    border-radius: 10px;
+    width: 95%;
+    height: 15%;
+    background: white;
+    visibility: visible;
+    position: fixed;
+    top: 150px;
+  }
+  .modal::before {
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid white;
+    border-right: 15px solid transparent;
+    top: 142px;
+    content: "";
+    position: fixed;
+    right: 17px;
+  }
+  .modal h3 {
+    color: purple;
+  }
+  .modal div {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .modal-container {
+    border: 2px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding-top: 40%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
 
-.selectionImageContainer img{
+.selectionImageContainer img {
   width: 150px;
 }
 #outerBox {
-    background-color: white;
-    box-shadow: 0px 0px 20px -15px;
-    padding: 0px 0px 20px 0;
-    border-radius: 10px;
-    margin: 0 auto;
-    text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 20px -15px;
+  padding: 0px 0px 20px 0;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
-  #outerBox { border-radius: 0; }
+  #outerBox {
+    border-radius: 0;
+  }
 }
 
-.selectionBox{
+.selectionBox {
   padding: 10px;
   margin: 10px;
   border: solid 1px lightgrey;
   border-radius: 5px;
 }
-.checkboxText{
+.checkboxText {
   text-align: center;
 }
-.checkbox{
+.checkbox {
   float: left;
 }
 
 #submitButtonContainer {
-    height: 50px;
-    position: relative;
+  height: 50px;
+  position: relative;
 }
